@@ -12,6 +12,10 @@ phases:
     commands:
         # run build script
         - npm run build
+
+  post_build:
+    commands:
+      - chmod +x scripts/*.sh
      
 artifacts:
   # include all files required to run the application

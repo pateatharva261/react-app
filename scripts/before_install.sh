@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Stopping Nginx if running..."
-systemctl stop nginx || true
+systemctl stop httpd || true
 
 echo "Cleaning old files..."
-rm -rf /var/www/react-app
+rm -rf /var/www/html
