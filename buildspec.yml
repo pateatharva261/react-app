@@ -3,28 +3,20 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 18.20.5
-   
+      nodejs: 18
     commands:
-        - npm install
-       
+      - npm install
+
   build:
     commands:
-        # run build script
-        - npm run build
+      - npm run build
 
   post_build:
     commands:
       - chmod +x scripts/*.sh
-     
+
 artifacts:
-  # include all files required to run the application
   files:
     - appspec.yml
     - dist/**/*
     - scripts/**/*
-  discard-paths: no
-    #- src/**/*
-    #- package.json
-    #- appspec.yml
-    #- scripts/**/*
